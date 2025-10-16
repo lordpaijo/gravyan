@@ -1,5 +1,6 @@
 use crate::app::{App, AppState, InputField};
 use crate::colors::*;
+use ratatui::style::Stylize;
 use ratatui::{
     Frame,
     layout::{Alignment, Constraint, Direction, Layout, Rect},
@@ -21,11 +22,14 @@ pub fn ui(f: &mut Frame, app: &App) {
     let header = Paragraph::new(vec![
         Line::from(Span::styled(
             "GRAVYAN",
-            Style::default().fg(MAUVE).add_modifier(Modifier::BOLD),
+            Style::default()
+                .fg(MAUVE)
+                .add_modifier(Modifier::BOLD)
+                .bold(),
         )),
         Line::from(Span::styled(
             "LordPaijo (2025) gravyan v0.2.7",
-            Style::default().fg(OVERLAY0),
+            Style::default().fg(OVERLAY0).bold(),
         )),
     ])
     .alignment(Alignment::Center)
