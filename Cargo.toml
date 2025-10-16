@@ -1,5 +1,8 @@
 [package]
-name = "getgrav"
+name = "gravyan"
+description = "A simple terminal-based gravity calculator"
+repository = "https://github.com/lordpaijo/gravyan"
+license = "MIT"
 version = "0.1.0"
 edition = "2024"
 
